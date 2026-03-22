@@ -1,13 +1,40 @@
-# 台股 ETF 量化策略分析（0050 ETF）
+# 📊 Taiwan ETF Quantitative Strategy Analysis (0050)
 
-## 📌 專案概述
-本專案比較三種策略在 0050 ETF 上的表現：
+## 📌 Project Overview
+This project evaluates and compares three investment strategies on Taiwan ETF **0050**:
 
 - Buy & Hold
-- MA20 Strategy
-- Momentum (60d)
+- MA20 (Moving Average)
+- Momentum (60-day)
 
-使用 Python 進行回測，並透過 Tableau 視覺化結果。
+The strategies are backtested using Python, and results are visualized using Tableau.
+
+---
+
+## ⚙️ Methodology
+
+### Data
+- Source: Yahoo Finance (via yfinance)
+- Asset: 0050.TW
+- Period: 2019–2025
+
+### Strategy Logic
+
+**1. Buy & Hold**
+- Always fully invested
+
+**2. MA20 Strategy**
+- Buy when price > MA20
+- Sell when price < MA20
+
+**3. Momentum (60d)**
+- Buy when 60-day return > 0
+- Otherwise hold cash
+
+### Backtesting Assumptions
+- Initial capital: 1.0
+- Fully invested or fully in cash
+- Transaction costs included
 
 ---
 
@@ -21,8 +48,18 @@
 
 ---
 
+## 📊 Tableau Dashboard
+
+![Dashboard](dashboard/tableau_screenshot.png)
+
+---
+
 ## 💡 Key Insights
 
-- Buy & Hold 報酬最高，但回撤較大
-- MA20 降低波動
-- Momentum 在報酬與風險間取得平衡
+- Buy & Hold achieves the highest return but suffers larger drawdowns  
+- MA20 reduces volatility and downside risk  
+- Momentum provides a balance between return and risk  
+
+---
+
+## 📁 Project Structure
