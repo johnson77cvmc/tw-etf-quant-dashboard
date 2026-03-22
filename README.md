@@ -25,7 +25,7 @@ The strategies are backtested using Python, and results are visualized using Tab
 
 **2. MA20 Strategy**
 - Buy when price > MA20
-- Sell when price < MA20
+- Otherwise hold cash
 
 **3. Momentum (60d)**
 - Buy when 60-day return > 0
